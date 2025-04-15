@@ -1,5 +1,9 @@
 # Model Context Protocol
 
+Here we follow the basic tutorial from the [official MCP Python SDK page on GitHub](https://github.com/modelcontextprotocol/python-sdk).
+
+## About `uv`
+
 We will try to use [`uv`](https://docs.astral.sh/uv/) as the project manager, instead of conda or pip.
 
 Install `uv` as follow:
@@ -7,7 +11,7 @@ Install `uv` as follow:
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-Now we follow the [official MCP Python SDK page on GibHub](https://github.com/modelcontextprotocol/python-sdk?tab=readme-ov-file).
+Now we follow the [official MCP Python SDK page on GitHub](https://github.com/modelcontextprotocol/python-sdk).
 
 Create a demo folder in this folder:
 ```bash
@@ -18,4 +22,20 @@ cd mcp-server-demo
 Now install MCP CLI dependency using `uv`:
 ```bash
 uv add "mcp[cli]"
+```
+
+It will create a `.venv/` folder, where a local pre-installed Python interpreter from your machine will be used (via symbolic link), and Python dependencies will be installed inside. If you haven't install any Python interpreters, follow [this link](https://docs.astral.sh/uv/guides/install-python/) to run `uv python install` beforehand.
+
+Since we are using venv, we need to first activate this environment, where we then run python scripts with the installed dependencies. We need to run:
+```bash
+# without uv
+source .venv/bin/activate
+python main.py
+deactivate
+```
+
+**Alternatively**, we can use `uv run xxx` as a neat replacement for the aforementioned 3 lines.
+```bash
+# with uv run
+uv run python main.py
 ```
