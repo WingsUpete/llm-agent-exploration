@@ -39,3 +39,9 @@ deactivate
 # with uv run
 uv run python main.py
 ```
+
+To utilize the `uv` inspector web console, run `uv dev` instead:
+```bash
+uv run mcp dev main.py
+```
+Go to the local endpoint provided by the console output and play with your MCP server.
