@@ -9,3 +9,4 @@ Please follow this order to check the demos:
 4. Tools / Function Call
 5. RAG
 6. Memory
+7. MCP
