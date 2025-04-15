@@ -23,7 +23,7 @@ async def run():
         pprint(tool.inputSchema)
         print('======')
       # 1. tool - call
-      tool_res = await session.call_tool('name: calc_sqrt', arguments={
+      tool_res = await session.call_tool('calc_sqrt', arguments={
         'x': 16
       })
       print(f'> Invoke tool - calc_sqrt: isError={tool_res.isError}; result={tool_res.content}')
