@@ -16,6 +16,7 @@ def get_greeting(name: str) -> str:
 
 @mcp.prompt()
 def review_code(code: str) -> str:
+  """ Constructs a prompt for code review. """
   return f"Please review this code:\n\n{code}"
 
 if __name__ == "__main__":

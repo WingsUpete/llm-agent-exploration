@@ -2,6 +2,8 @@
 
 Here we follow the basic tutorial from the [official MCP Python SDK page on GitHub](https://github.com/modelcontextprotocol/python-sdk).
 
+For more information about the demo, go to the `README.md` file inside the `mcp-server-demo` project.
+
 ## About `uv`
 
 We will try to use [`uv`](https://docs.astral.sh/uv/) as the project manager, instead of conda or pip.
@@ -30,18 +32,18 @@ Since we are using venv, we need to first activate this environment, where we th
 ```bash
 # without uv
 source .venv/bin/activate
-python main.py
+python server.py
 deactivate
 ```
 
 **Alternatively**, we can use `uv run xxx` as a neat replacement for the aforementioned 3 lines.
 ```bash
 # with uv run
-uv run python main.py
+uv run python server.py
 ```
 
 To utilize the `uv` inspector web console, run `uv dev` instead:
 ```bash
-uv run mcp dev main.py
+uv run mcp dev server.py
 ```
 Go to the local endpoint provided by the console output and play with your MCP server.
