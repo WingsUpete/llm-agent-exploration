@@ -26,7 +26,7 @@ Now install MCP CLI dependency using `uv`:
 uv add "mcp[cli]"
 ```
 
-It will create a `.venv/` folder, where a local pre-installed Python interpreter from your machine will be used (via symbolic link), and Python dependencies will be installed inside. If you haven't install any Python interpreters, follow [this link](https://docs.astral.sh/uv/guides/install-python/) to run `uv python install` beforehand.
+It will create a `.venv/` folder, where a local pre-installed Python interpreter from your machine will be used (via symbolic link), and Python dependencies will be installed inside. If you haven't installed any Python interpreters, follow [this link](https://docs.astral.sh/uv/guides/install-python/) to run `uv python install` beforehand.
 
 Since we are using venv, we need to first activate this environment, where we then run python scripts with the installed dependencies. We need to run:
 ```bash
