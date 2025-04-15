@@ -23,10 +23,10 @@ async def run():
         pprint(tool.inputSchema)
         print('======')
       # 1. tool - call
-      tool_res = await session.call_tool(tools.tools[0].name, arguments={
-        list(tools.tools[0].inputSchema['properties'].keys())[0]: 16
+      tool_res = await session.call_tool('name: calc_sqrt', arguments={
+        'x': 16
       })
-      print(f'> Invoke tool - {tools.tools[0].name}: isError={tool_res.isError}; result={tool_res.content}')
+      print(f'> Invoke tool - calc_sqrt: isError={tool_res.isError}; result={tool_res.content}')
       # 2. resource template - list
       resource_templates = await session.list_resource_templates()
       print('----------- RESOURCE TEMPLATES -----------')
@@ -50,10 +50,10 @@ async def run():
         pprint(prompt.arguments)
         print('======')
       # 3. prompt - call
-      prompt_res = await session.get_prompt(prompts.prompts[0].name, arguments={
-        prompts.prompts[0].arguments[0].name: 'x = [i**2 for i in range(10) if i % 2 != 0]'
+      prompt_res = await session.get_prompt('review_code', arguments={
+        'code': 'x = [i**2 for i in range(10) if i % 2 != 0]'
       })
-      print(f'> Construct prompt - {prompts.prompts[0].name}: {prompt_res.messages}')
+      print(f'> Construct prompt - review_code: {prompt_res.messages}')
       if isinstance(prompt_res.messages[0], types.PromptMessage):
         cur_prompt_msg: types.PromptMessage = prompt_res.messages[0]
         print(f'> Prompt (role={cur_prompt_msg.role}; type={cur_prompt_msg.content.type}):')
