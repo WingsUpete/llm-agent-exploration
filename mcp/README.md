@@ -42,7 +42,7 @@ deactivate
 uv run python server.py
 ```
 
-To utilize the `uv` inspector web console, run `uv dev` instead:
+To utilize the `mcp` inspector web console, run `mcp dev` instead:
 ```bash
 uv run mcp dev server.py
 ```
