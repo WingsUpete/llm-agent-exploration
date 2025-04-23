@@ -1,0 +1,9 @@
+[project]
+name = "kg"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "neo4j==5.28.1",
+]
