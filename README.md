@@ -10,3 +10,4 @@ Please follow this order to check the demos:
 5. RAG
 6. Memory
 7. MCP
+8. Knowledge Graph & GraphRAG
